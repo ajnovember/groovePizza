@@ -201,6 +201,15 @@ function mousePressed(){
 			rhythm4[i] = 0;
 			}
 		} 
+		var d = dist(mouseX, mouseY, canvasWidth/2 + (dia5/2) * cos((-PI/2)+i*(PI/(slices/2))), canvasHeight/2 + (dia5/2) * sin((-PI/2)+i*(PI/(slices/2))));
+		if (d < 17){
+			if(rhythm5[i] == 0){
+			rhythm5[i] = 1;
+			}
+			else{
+			rhythm4[i] = 0;
+			}
+		} 
 	}
 }
 
