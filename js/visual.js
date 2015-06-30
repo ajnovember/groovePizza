@@ -10,7 +10,7 @@ function drawPizza(){
 	ellipse(canvasWidth/2,canvasHeight/2, 715,715);
 	
 	for(var i = 0; i < slices; i ++){
-	var theta = 2*PI/slices;
+	 	var theta = 2*PI/slices;
 		stroke(70);
 		strokeWeight(.3);
 		line(canvasWidth/2, canvasHeight/2, canvasWidth/2 + 375* cos(theta*3/2 + i*theta - PI/2), canvasHeight/2 + 375 * sin(theta*3/2 + i*theta - PI/2));

@@ -58,7 +58,7 @@ function grooveChange(){
 				 
 				if(document.getElementById('grooves').value =="shiko"){shiko();}
 				 
-				if(document.getElementById('grooves').value =="makongo"){makongon();}
+				if(document.getElementById('grooves').value =="makongo"){makongo();}
 				 	
 	
 

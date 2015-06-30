@@ -164,21 +164,44 @@ function draw(){
 
 function mousePressed(){
 	//console.log(rhythm5);
-	for(var j = 0; j < 5; j++){
-
-		for(var i = 0; i < slices; i++){
-			var d = dist(mouseX, mouseY, canvasWidth/2 + (diams[j]/2) * cos((-PI/2)+i*(PI/(slices/2))), canvasHeight/2 + (diams[j]/2) * sin((-PI/2)+i*(PI/(slices/2))));
-			if (d < 27){
-				if(pizza[j][i] == 0){
-				pizza[j][i] = 1;
-				}
-				else{
-				pizza[j][i] = 0;
-				}
-			} 
-		}
+	for(var i = 0; i < slices; i++){
+		var d = dist(mouseX, mouseY, canvasWidth/2 + (dia1/2) * cos((-PI/2)+i*(PI/(slices/2))), canvasHeight/2 + (dia1/2) * sin((-PI/2)+i*(PI/(slices/2))));
+		if (d < 27){
+			if(rhythm1[i] == 0){
+			rhythm1[i] = 1;
+			}
+			else{
+			rhythm1[i] = 0;
+			}
+		} 
+		var d = dist(mouseX, mouseY, canvasWidth/2 + (dia2/2) * cos((-PI/2)+i*(PI/(slices/2))), canvasHeight/2 + (dia2/2) * sin((-PI/2)+i*(PI/(slices/2))));
+		if (d < 20){
+			if(rhythm2[i] == 0){
+			rhythm2[i] = 1;
+			}
+			else{
+			rhythm2[i] = 0;
+			}
+		} 
+		var d = dist(mouseX, mouseY, canvasWidth/2 + (dia3/2) * cos((-PI/2)+i*(PI/(slices/2))), canvasHeight/2 + (dia3/2) * sin((-PI/2)+i*(PI/(slices/2))));
+		if (d < 17){
+			if(rhythm3[i] == 0){
+			rhythm3[i] = 1;
+			}
+			else{
+			rhythm3[i] = 0;
+			}
+		} 
+		var d = dist(mouseX, mouseY, canvasWidth/2 + (dia4/2) * cos((-PI/2)+i*(PI/(slices/2))), canvasHeight/2 + (dia4/2) * sin((-PI/2)+i*(PI/(slices/2))));
+		if (d < 17){
+			if(rhythm4[i] == 0){
+			rhythm4[i] = 1;
+			}
+			else{
+			rhythm4[i] = 0;
+			}
+		} 
 	}
-		
 }
 
 
