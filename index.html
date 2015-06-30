@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+
+<html> 
+<head>
+	<script language="javascript" src="./lib/p5.js"></script>
+	<script language="javascript" src="./lib/p5.sound.js"></script>
+	<script language="javascript" src="./js/visual.js"></script>
+	<script language="javascript" src="./js/GP.js"></script>
+	<script language="javascript" src="./js/Grooves.js"></script>
+
+	 <link rel="stylesheet" type="text/css" href="./css/GPstyle.css">
+	<script type="text/javascript" src="./lib/p5.dom.js"></script>
+	<title> Groove Pizza - Adam November </title> 
+	
+</head>
+
+<body>
+<div id = 'content'> 
+	<div id = "right">
+		<div id = "sounds">
+	 
+		
+			<h2> Sounds </h2>
+			<input id = "volume" type = "range" min = 0 max = 100 >VOLUME</input><br>
+		
+			
+			<select id='sound1' class = 'sounds' onchange = 'soundChange()'>
+			              <option value="acKick1">Acoustic Kick 1</option>
+			              <option value="acKick2">Acoustic Kick 2</option>
+			              <option value="elKick1">Electronic Kick 1</option>	              
+			              <option value="elKick2">Electronic Kick 2</option>
+			             
+			         </select>  <br>
+			<select id='sound2' class = 'sounds' onchange = 'soundChange()'>
+			           	  <option value="acSnare1">Acoustic Snare 1</option>
+			              <option value="acSnare2">Acoustic Snare 2</option>
+			              <option value="elSnare1">Electronic Snare 1</option>	              
+			              <option value="elSnare2">Electronic Snare 2</option>
+			         </select>  <br>
+			<select id='sound3' class = 'sounds' onchange = 'soundChange()'>
+			              <option value="acHat1">Acoustic Hat 1</option>
+			              <option value="elHat1">Electronic Hat 1</option>
+			              <option value="elHat2">Electronic Hat 2</option>
+			              <option value="tamb">Tambourine</option>	              
+			              
+			         </select>  <br>
+			<select id='sound4' class = 'sounds' onchange = 'soundChange()'>
+			              <option value="ride1">Ride 1</option>
+			              <option value="ride2">Ride 2</option>
+			              <option value="stick">Stick Click</option>
+			              <option value="openHat">Open High Hat</option>  
+			                
+			                          
+			              
+			         </select>   <br>
+			<select id='sound5' class = 'sounds' onchange = 'soundChange()'>
+			              <option value="cowbell1">Cowbell 1</option>
+			              <option value="cowbell2">Cowbell 2</option>
+			              <option value="clave">Clave</option>
+			              <option value="clap">Clap</option>
+			             		              
+			              
+			         </select>  <br> 
+
+			<input id = "reverb" type = "range" min = 0.0 max = 100.0 > REVERB</button><br>
+			
+		
+		</div>
+
+		<h2 class = 'setting'> Labels </h2>
+		       
+			<select id='label' class = ''  onchange ="labelChange()">
+			          
+				
+			
+				<option  value="none" checked>None</option>
+				<br>
+				<option  value="8ths" >8th Notes</option>
+				<br>
+				<option  value="straight">Straight</option>
+				<br>
+				<option  value="16ths">16th Notes</option>
+				<br>
+			</select>
+		
+		
+		
+	</div>	
+	<div id = "left">
+		<div id = "time">
+			<h2> Time </h2>
+			<button id = "tap" onclick = "tap()">TAP</button><br>
+			<input id = "tempo" type = "range" min = 60 max = 320>TEMPO</input><br>
+			<input id = "slices" type = "range" min = 2 max = 16>SLICES</input><br>
+			<input id = "swing" type = "range" min = 0 max = 50>SWING</input><br>
+			
+		
+		</div>
+	
+	
+		
+		<div id = "sets">
+			<h2> Grooves </h2>
+			
+			
+			<select id='grooves' class = ''  onchange ="grooveChange()">
+			          
+				
+				<option  value="billieJean"  checked>Billie Jean</option>
+				<br>
+				<option  value="plain" >Plain</option>
+				<br>
+				<option  value="uhnTiss">Uhn Tiss</option>
+				
+			
+				<br>
+				<option  value="levee" >Levee</option>
+				
+				<br>
+				<option  value="coldSweat">Cold Sweat</option>
+				<br>
+				<option  value="funkyDrummer">Funky Drummer</option>
+				<br>
+				<option  value="impeachPresident">Impeach the President</option>
+				<br>
+				<option  value="walkThisWay">Walk this Way</option>
+				<br>
+				<option  value="newDay">It's a New Day</option>
+				<br>
+				<option  value="papaWasToo">Papa Was Too</option>
+				<br>
+				<option  value="bigBeat">The Big Beat</option>
+				<br>
+				<option  value="ashleysRoachclip">Ashley's Roachclip</option>
+				<br>
+				<option  value="takeMeToMardiGras">Take Me To Mardi Gras</option>
+				<br>
+				<option  value="apache1">Apache 1</option>
+				<br>
+				<option  value="apache2">Apache 2</option>
+				<br>
+				<option  value="apache3">Apache 3</option>
+				<br>
+				<option  value="apache4">Apache 4</option>
+				<br>
+				<option  value="syntheticSubtitution">Synthetic Substitution</option>
+				<br>
+				<option  value="sonClave32">Son Clave (3-2)</option>
+				<br>
+				<option  value="sonClave23">Son Clave (2-3)</option>
+				<br>
+				<option  value="rumba">Rumba</option>
+				<br>
+				<option  value="bossaNova">Bossa Nova</option>
+				<br>
+				<option  value="soukous">Soukous</option>
+				<br>
+				<option  value="gahu">Gahu</option>
+				<br>
+				<option  value="shiko">Shiko</option>
+				<br>
+				<option  value="makongo">Makongon</option>
+				<br>
+			
+				
+			</select>
+
+		
+		</div><br>
+		<div id = "random" class = "setting">
+			
+				<button  onclick = "randomSet()">RANDOM</button><br>
+				
+				<input  id = "density" type = "range" min = 5  max = 70 style = "width:115px;">DENSITY</input><br>
+		</div>
+		
+		
+	</div>
+
+	<div id='pizza'
+		
+	</div>
+</div>
+</body>
+
+
+
+
+
+</html>
+

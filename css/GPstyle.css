@@ -1,0 +1,57 @@
+
+body {
+    background-image: url('../imgs/bricks.jpg');
+	
+
+}
+#content{
+	width:1315px;
+	margin:12px auto 12px auto;
+	margin}
+
+
+#right{
+		background-color:rgba(255,255,255,0.7);
+		border-width: 1px;
+		border-style: solid;
+		border-color: black;
+		float:right;
+		margin-left: 15px;
+}
+
+#sounds, #time, #sets, #label{
+	margin: 10px;
+}
+
+.setting{
+	margin:10px;
+}
+
+
+#left{
+	background-color:rgba(255,255,255,0.7);
+	border-width: 1px;
+	float:left;
+	border-style: solid;
+	border-color: black;
+	margin-right: 15px;
+	
+}
+#reset{
+	float:left;
+}
+
+#boots{
+	float:left;
+}
+
+#sets{
+	float:left;
+}
+
+#pizza{
+width: auto;
+	height: 100%;
+	display: block;
+	float:none;
+}
